@@ -3,11 +3,16 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    margin: 0 5%;
+    margin: 0%;
 
     h1 {
+        display: flex;
+        align-items: center;
         margin: .2em .2em .2em .6em;
         font-size: clamp(1.25rem, 1.0714rem + 0.9524vw, 2.5rem);
+        img {
+            margin-right: 2%;
+        }
         span {
             color: #08FC9D;
         }
