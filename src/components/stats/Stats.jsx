@@ -61,7 +61,15 @@ export default function Stats() {
   };
 
   const now = new Date();
-  const currentDateTime = now.toLocaleString().replace(",", "");
+  // const currentDateTime = now.toLocaleString().replace(",", "");
+  const currentDateTime = now.toLocaleString('de-DE', {
+    hour12: false,
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric'
+  }).replace(',', '');
 
   // funktion um die inputs aus dem form zu verarbeiten --> nimmt name, value und e.target entgegen und updatet
   //  Stats, dabei werden die alten stats durch ...prevStats übernommen und diesem Fall ein neues Objekt angelegt mit den neu empfangen stats
