@@ -24,7 +24,7 @@ dist-ssr
 *.sw?
 
 # API-Key
-api.js
+.env
 
 StatsExplanation.jsx
 HomeExplanation.jsx
