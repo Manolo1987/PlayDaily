@@ -1,35 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Home.module.css';
 import { NavLink } from 'react-router-dom'
-import { apiKey } from '../../assets/api';
+import dotenv from 'dotenv';
+dotenv.config();
 
+const apiKey = process.env.API_KEY;
 export default function Home() {
-  const [data, setData] = useState([
-    // { url: 'https://dotesports.com/counter-strike/news/cs2-stars-threatening-to-skip-blast-media-day-over-apparent-astralis-favoritism',
-    //   title: 'CS2 stars threatening to skip BLAST media day over apparent Astralis favoritism',
-    //   image: 'https://dotesports.com/wp-content/uploads/2024/09/cs2-astralis-br0.jpg'
-    //  },
-    // { url: 'https://dotesports.com/counter-strike/news/aleksib-breaks-cs2-grand-final-curse-as-navi-denies-eternal-fire-fairytale-ending',
-    //   title: 'Aleksib breaks CS2 grand final curse as NAVI denies Eternal Fire’s fairytale ending',
-    //   image: 'https://dotesports.com/wp-content/uploads/2024/03/20240331-001524_StephanieLindgren@Vexanie_PGL-CPH-Major-11-Enhanced-NR-1.jpg'
-    //  }
-  ]);
+  console.log(process.env.API_KEY);
+  const [data, setData] = useState([]);
   const [topArticle, setTopArticle] = useState([]);
-
+  
   const russianAlphabet = [
     'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й',
     'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф',
     'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я'
   ];
-
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
         // keine good practice mit dem hardgecodeten API key, aber wenigstens nicht direkt sichtbar
         // soll sonst verschlüsselt im backend auf dem server liegen und nur so oft wie nötig benutzt und übermittelt werden, da es ein sicherheitsrisiko ist
-        // 
+        
+        
+        // mit hardgecodetem API key funktioniert es
+        
+        console.log(process.env.API_KEY);
         const response = await fetch(`https://gnews.io/api/v4/search?q=cs2&apikey=${apiKey}`);
         const data = await response.json();
+        console.log(data);
+        
 
         // filtert die Artiekl heraus die russische Schriftzeichen enthalten
         const filteredArticles = data.articles.filter(article => {

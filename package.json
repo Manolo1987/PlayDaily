@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
     "dompurify": "^3.1.6",
+    "dotenv": "^16.4.5",
     "google-auth-library": "^9.14.2",
     "googleapis": "^144.0.0",
     "hltv": "^3.5.0",
