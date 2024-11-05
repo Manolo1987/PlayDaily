@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './Navbar.module.css'
-import Crosshair from '../../../public/crosshair.png'
+import Crosshair from 'crosshair.png'
 
 export default function navbar() {
   return (
