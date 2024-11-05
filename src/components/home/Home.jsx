@@ -2,10 +2,14 @@ import React, { useState, useEffect } from 'react';
 import styles from './Home.module.css';
 import { NavLink } from 'react-router-dom'
 import dotenv from 'dotenv';
-dotenv.config();
+// dotenv.config();
+dotenv.config({ path: '../.env' });
 
 const apiKey = process.env.API_KEY;
+
 export default function Home() {
+  console.log(apiKey);
+  
   console.log(process.env.API_KEY);
   const [data, setData] = useState([]);
   const [topArticle, setTopArticle] = useState([]);
