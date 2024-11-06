@@ -85,14 +85,16 @@
 
   h4 {
     margin: 15px;
+    background: rgba(1, 178, 110, 0);
   }
 }
 
 .heroWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
+
 .hero {
   margin: 2% 5%;
   display: flex;
@@ -103,6 +105,8 @@
     0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
   border: 3px solid #01b26ebb;
   border-radius: 13px;
+  background: rgba(1, 178, 110, 0.05);
+  overflow: hidden;
 
   a {
     width: 100%;
@@ -111,20 +115,19 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    background: rgba(1, 178, 110, 0.05);
 
     img {
-      width: 75vw;
-      display: flex;
-      justify-content: center;
-      border: 2px solid rgba(255, 255, 255, 0.452);
-      border-radius: 15px;
-      margin: 0 3% 3% 3%;
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 0 0 10px 10px; 
+      margin: 0;
     }
   }
 }
 
 @media screen and (min-width: 768px) {
-
   .progress {
     display: flex;
     justify-content: center;
@@ -147,8 +150,8 @@
     width: 100%;
 
     a {
-        width: 100%;
-        font-size: 1.3em;
+      width: 100%;
+      font-size: 1.3em;
       img {
         width: 75%;
       }
