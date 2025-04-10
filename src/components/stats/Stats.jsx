@@ -29,9 +29,9 @@ export default function Stats() {
 
   const pictures = [Ancient, Anubis, Dust2, Inferno, Mirage, Nuke, Vertigo]
 
-  // vorherige Daten --> hier overallstats werden geladen, wenn sie vorhanden sind
-  // sind sie vorhanden werden im usestate initialisiert
-  // parse ist nötig data localstorage daten immer als string gespeichert werden
+  // vorherige Daten --> hier overallstats werden laden, wenn sie vorhanden sind
+  // sind sie vorhanden werden sie im usestate initialisiert
+  // parse ist nötig data localstorage daten werden immer als string gespeichert werden
   useEffect(() => {
     const storedOverallStats = JSON.parse(localStorage.getItem('overallStats'));
     if (storedOverallStats) {
