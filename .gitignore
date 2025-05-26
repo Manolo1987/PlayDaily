@@ -3,3 +3,9 @@ node_modules
 StatsExplanation.jsx
 HomeExplanation.jsx
 detailed-stats-component-explanation.md
+
+# Environment files
+.env
+backend/.env.local
+backend/.env
+backend/.env.*.local
