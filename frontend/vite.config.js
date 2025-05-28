@@ -12,5 +12,13 @@ export default defineConfig(({ command, mode }) => {
       nodePolyfills(), // this is necessary to avoid "process is not defined issue"
       react(),
     ],
+    server: {
+      host: '0.0.0.0', // Lausche auf allen Interfaces
+      port: 3000,      // Stelle sicher, dass dieser Port mit dem in docker-compose.yaml übereinstimmt
+      strictPort: true, // Optional: Verhindert, dass Vite einen anderen Port wählt, falls 3000 belegt ist
+      hmr: {
+        clientPort: 3000, // Wichtig für Hot Module Replacement über Docker
+      }
+    }
   };
 });
